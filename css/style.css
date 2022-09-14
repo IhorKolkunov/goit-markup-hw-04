@@ -3,6 +3,7 @@
     --text-color: #757575;
     --secondary-color: #2196F3;
     --revers-color: #ffffff;
+    --icon-color: #AFB1B8;
 } 
 
 body {
@@ -68,6 +69,8 @@ img {
 }
 
 .navigation-margin {
+    display: flex;
+
     margin-right: 50px;
 }
 .navigation-margin:last-child {
@@ -102,10 +105,20 @@ img {
 .navigation-menu:hover,
 .navigation-menu:focus {
     color: var(--secondary-color);
+    fill: var(--secondary-color);
 }
 .contacts-address {
+    display: flex;
+    align-items: center;
+
     color: var(--text-color);
 }
+
+.contacts-address-icon {
+    margin-right: 10px;
+}
+
+
 /* ======== HERO / OUR ADVANTAGES / WHAT DO WE DO / OUR TEAM ======== */
 
 .section {
@@ -116,11 +129,17 @@ img {
 /* ======== HERO ======== */
 
 .hero-background {
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 200px;
     padding-bottom: 200px;
+    width: 1600px;
 
-    background-color: #2F303A;
-}
+    background-color: #C4C4C4;
+    background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),  url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    }
 
 .hero {
     width: 696px;
@@ -196,6 +215,17 @@ img {
     letter-spacing: 0.03em;
     color: var(--text-color);
 }
+.advantages-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+}
 
 /* ======== WHAT DO WE DO ======== */
 
@@ -205,12 +235,12 @@ img {
     margin-right: -15px;
     margin-left: -15px;
 }
+
 .work-photo-items {
     flex-basis: calc(100% / 3 - 30px);
     margin-right: 15px;
     margin-left: 15px;
 }
-
 
 /* ======== WHAT DO WE DO & OUR TEAM ======== */
 
@@ -243,6 +273,8 @@ img {
     border-radius: 0px 0px 4px 4px;
     border-top: none;
     background-color: var(--revers-color);
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .name-expert {
@@ -256,7 +288,7 @@ img {
     letter-spacing: 0.03em;
 }
 .profession {
-    padding-bottom: 30px;
+    padding-bottom: 16px;
 
     text-align: center;
     font-size: 16px;
@@ -265,13 +297,89 @@ img {
     color: var(--text-color);
 }
 
+.social-list {
+   display: flex; 
+   justify-content: center;
+   flex-wrap: wrap;
+   margin-left: -5px;
+   margin-right: -5px;
+}
+.social-list-padding {
+    flex-basis: calc(100% /4 - 10px);
+    padding-bottom: 30px;
+}
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--icon-color);
+    }
+
+.social-list-link:hover,
+.social-list-link:focus {
+    fill: var(--revers-color);
+    background-color: var(--secondary-color);
+}
+
+/* ======================= POST CLIENTS ============================ */
+
+.icon-clients {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.icon-clients-margin {
+    flex-basis: calc(100% / 6 - 150px);
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.client-cards-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+
+    fill: var(--icon-color);
+    border: 1px solid #AFB1B8; 
+    border-radius: 4px;
+    }
+
+.client-cards-link:hover,
+.client-cards-link:focus {
+    fill: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+
+
+
 /* ======== FOOTER ======== */
 
 .footer-background {
+    display: flex;
+    
     padding-top: 60px;
     padding-bottom: 60px;
 
     background-color: #2F303A;
+}
+
+.footer-flex {
+    display: flex;
+}
+
+.footer-contact {
+    margin-right: 70px;
+
+    width: 231px;
 }
 
 .footer-logo-color {
@@ -300,6 +408,46 @@ img {
     color: var(--secondary-color);
 }
 
+.footer-heading {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: var(--revers-color);
+}
+
+.footer-social {
+    margin-top: 12px;
+    width: 206px;
+}
+
+.footer-social-list {
+    display: flex; 
+
+    margin-left: -5px;
+    margin-right: -5px;
+ }
+ 
+ .footer-social-list-link {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+     width: 44px;
+     height: 44px;
+     border-radius: 50%;
+     fill: var(--revers-color);
+     }
+ 
+ .footer-social-list-link:hover,
+ .footer-social-list-link:focus {
+     fill: var(--revers-color);
+     background-color: var(--secondary-color);
+ }
+
 /* ======================= PORTFOLIO ============================ */
 
 .section-button {
@@ -324,7 +472,7 @@ img {
 .portfolio-button {
     padding: 6px 22px;
     border-radius: 4px;
-    border: 2px solid #F5F4FA;
+    border: none;
 
     font-family: inherit;
     font-weight: 500;
@@ -338,7 +486,10 @@ img {
 .portfolio-button:hover,
 .portfolio-button:focus {
     color: var(--revers-color);
-    background-color: #2196F3;
+    background-color: var(--secondary-color);
+
+    border: none;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .section-content {
@@ -358,6 +509,15 @@ img {
 
     margin-right: 30px;
     margin-bottom: 30px;
+}
+
+.portfolio-cards-text {
+    text-decoration: none;
+}
+
+.portfolio-cards:hover,
+.portfolio-cards:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .conteiner-desc {
@@ -381,14 +541,4 @@ img {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
-}
-
-
-
-/* ==========TEST========= */
-
-
-.test {
-    background-image: url(/images/img-1.jpg);
-    background-size: contain;
 }
