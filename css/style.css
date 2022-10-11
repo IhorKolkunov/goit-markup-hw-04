@@ -301,6 +301,7 @@ img {
 .social-list {
    display: flex; 
    justify-content: center;
+   gap: 10px;
 }
 
 
@@ -414,10 +415,6 @@ img {
     text-transform: uppercase;
     
     color: var(--revers-color);
-}
-
-.footer-social {
-
 }
 
 .footer-social-list {
@@ -540,4 +537,11 @@ img {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
+    transition: color ;
+}
+
+@keyframes lololo {
+    0% {
+        transform: scale(2);
+    }
 }
